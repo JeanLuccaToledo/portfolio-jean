@@ -37,7 +37,7 @@ PORTIFÓLIO/
 
 ## 🚀 Como visualizar
 Você pode acessar o portfólio online através do GitHub Pages:  
-👉 [https://github.com/JeanLuccaToledo/portfolio-jean](https://github.com/JeanLuccaToledo/portfolio-jean)
+👉 [https://jeanluccatoledo.github.io/portfolio-jean/](https://jeanluccatoledo.github.io/portfolio-jean/)
 
 ---
 
