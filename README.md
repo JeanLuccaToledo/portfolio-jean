@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🌐 Portfólio Pessoal — Jean Lucca Toledo de Souza
 
 Este é o meu portfólio pessoal, desenvolvido para apresentar meus projetos e habilidades como **Full Stack Developer**.  
@@ -36,7 +37,7 @@ PORTIFÓLIO/
 
 ## 🚀 Como visualizar
 Você pode acessar o portfólio online através do GitHub Pages:  
-👉 [https://](https:)
+👉 [https://github.com/JeanLuccaToledo/portfolio-jean](https://github.com/JeanLuccaToledo/portfolio-jean)
 
 ---
 
@@ -44,3 +45,6 @@ Você pode acessar o portfólio online através do GitHub Pages:
 - Email: jean05lucca@gmail.com  
 - LinkedIn: [linkedin.com/in/jean-lucca-toledo](https://www.linkedin.com/in/jean-lucca-toledo-6838b7268/)  
 - GitHub: [github.com/JeanLuccaToledo](https://github.com/JeanLuccaToledo)
+=======
+# portfolio-jean
+>>>>>>> c76b67236b56cada3c3f367e99a02948c9828493
