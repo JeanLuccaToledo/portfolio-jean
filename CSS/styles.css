@@ -60,6 +60,7 @@ header {
   border: 1px solid var(--border); background: var(--card); color: var(--text);
 }
 .btn.primary { border: none; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #04131a; }
+
 .btn.teste { border: none; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #04131a; margin-bottom: 35px; }
 
 /* habilidades */
@@ -72,7 +73,31 @@ header {
 
 /* Projetos */
 .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+
+.project-card {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: center;
+  border: 1px solid var(--border);
+  width: 100%;
+  box-sizing: border-box;
+}
+.project-card h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #22d3ee;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
 
 /* Footer */
 footer { padding: 32px 0; border-top: 1px solid var(--border); background: rgba(11,18,32,.8); }
@@ -103,6 +128,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+
 .section-title::before {
   content: "";
   position: absolute;
@@ -124,6 +150,7 @@ h3 {
   position: relative;
   text-transform: capitalize;
 }
+
 h3::before {
   content: "";
   position: absolute;
@@ -142,16 +169,22 @@ h3::before {
   overflow: hidden;
   animation: typing 4s steps(22, end), blink 0.7s step-end infinite;
 }
+
 @keyframes typing {
   from { width: 0; }
   to { width: 100%; }
 }
+
 @keyframes blink {
   from, to { border-color: transparent; }
   50% { border-color: var(--accent); }
 }
 
-.title { margin: 0; text-align: center; }
+.title {
+  margin: 0;
+  text-align: center;
+}
+
 .title .name {
   font-size: 3.5rem;
   font-weight: 800;
@@ -159,6 +192,7 @@ h3::before {
   text-shadow: 0 0 5px #00ffcc, 0 0 15px #2c5364;
 }
 
+/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -170,6 +204,7 @@ h3::before {
   background: rgba(0,0,0,0.6);
   backdrop-filter: blur(4px);
 }
+
 .modal-content {
   background: #04131a;
   color: #fff;
@@ -180,6 +215,7 @@ h3::before {
   max-width: 500px;
   animation: fadeIn 0.5s ease;
 }
+
 .close {
   float: right;
   font-size: 1.8rem;
@@ -187,31 +223,48 @@ h3::before {
   color: var(--accent);
   transition: transform 0.2s ease;
 }
-.close:hover { transform: rotate(90deg); }
+
+.close:hover {
+  transform: rotate(90deg);
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.project-card {
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: #fff;
-  padding: 24px;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  text-align: center;
+/* Duplicates removidos e ajustes consistentes */
+.container {
+  width: 100%;
+  padding: 2rem;
 }
 
-.project-card h3 {
-  margin: 0;
-  font-size: 1.4rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: #22d3ee;
+/* Removido .projects (flex) para evitar conflito com .projects-grid */
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .hero-inner {
+    grid-template-columns: 1fr;      /* hero em 1 coluna */
+    text-align: center;
+  }
+  .subtitle { margin: 0 auto; }
+  .nav { height: auto; padding: 12px 0; }
+  .nav-links { justify-content: center; flex-wrap: wrap; }
+  .skills-grid { grid-template-columns: repeat(3, 1fr); }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;           /* header empilha no mobile */
+    gap: 12px;
+  }
+  .container { padding: 1rem; }
+  .title .name { font-size: 2.2rem; }
+  h3 { font-size: 1.2rem; }
+
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  .projects-grid { grid-template-columns: 1fr; }
+
+  .project-card { width: 100%; padding: 18px; }
 }
