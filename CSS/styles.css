@@ -60,7 +60,6 @@ header {
   border: 1px solid var(--border); background: var(--card); color: var(--text);
 }
 .btn.primary { border: none; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #04131a; }
-
 .btn.teste { border: none; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #04131a; margin-bottom: 35px; }
 
 /* habilidades */
@@ -104,7 +103,6 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-
 .section-title::before {
   content: "";
   position: absolute;
@@ -126,7 +124,6 @@ h3 {
   position: relative;
   text-transform: capitalize;
 }
-
 h3::before {
   content: "";
   position: absolute;
@@ -145,22 +142,16 @@ h3::before {
   overflow: hidden;
   animation: typing 4s steps(22, end), blink 0.7s step-end infinite;
 }
-
 @keyframes typing {
   from { width: 0; }
   to { width: 100%; }
 }
-
 @keyframes blink {
   from, to { border-color: transparent; }
   50% { border-color: var(--accent); }
 }
 
-.title {
-  margin: 0;
-  text-align: center;
-}
-
+.title { margin: 0; text-align: center; }
 .title .name {
   font-size: 3.5rem;
   font-weight: 800;
@@ -179,7 +170,6 @@ h3::before {
   background: rgba(0,0,0,0.6);
   backdrop-filter: blur(4px);
 }
-
 .modal-content {
   background: #04131a;
   color: #fff;
@@ -190,7 +180,6 @@ h3::before {
   max-width: 500px;
   animation: fadeIn 0.5s ease;
 }
-
 .close {
   float: right;
   font-size: 1.8rem;
@@ -198,11 +187,7 @@ h3::before {
   color: var(--accent);
   transition: transform 0.2s ease;
 }
-
-.close:hover {
-  transform: rotate(90deg);
-}
-
+.close:hover { transform: rotate(90deg); }
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -229,62 +214,4 @@ h3::before {
 .project-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-}
-
-.modal-content {
-  background: #04131a;
-  color: #e0e0e0;
-  margin: 8% auto;
-  padding: 30px;
-  border-radius: 12px;
-  width: 90%;
-  max-width: 600px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
-  animation: fadeIn 0.4s ease;
-}
-
-.modal-content h2 {
-  color: var(--accent);
-  margin-bottom: 1rem;
-}
-
-.modal-content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.modal-content li {
-  margin: 8px 0;
-  padding: 6px 10px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 6px;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.container {
-  width: 100%;
-  padding: 2rem;
-}
-
-.projects {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.project-card {
-  flex: 1 1 300px;
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    text-align: center;
-  }
-  .project-card {
-    width: 100%;
-  }
 }
