@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jean Lucca | Full Stack Developer</title>
+  <meta name="description" content="Portfólio profissional de desenvolvedor full stack: projetos, habilidades e contato." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <script src="JS/script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <span>Jean Lucca Toledo de Souza</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#projetos">Projetos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato" class="cta"><span>Contato</span> ➜</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <div class="eyebrow">Olá, eu sou</div>
+        <h1 class="title"><span class="name"> Jean Lucca Toledo de Souza </span> <br> <span class="typing" style="color:var(--accent);">Full Stack Developer</span></h1>
+        <p class="subtitle">Construo produtos digitais rápidos, acessíveis e bem desenhados. Do front-end ao back-end, entrego soluções escaláveis com foco em experiência do usuário e resultados de negócio.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projetos">Ver projetos</a>
+          <a class="btn" href="#contato">Falar comigo</a>
+          <a class="btn" href="mailto:jean05lucca@gmail.com">jean05lucca@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="portrait" aria-label="Foto e overlay de código">
+        <div class="code">
+        </div>
+        <img class="profile" src="IMG/job2.png" alt="Seu retrato">
+    </div>
+  </section>
+
+  <!-- Habilidades -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Habilidades</h2>
+        <p class="section-desc">Tecnologias que uso no dia a dia para entregar aplicações robustas, seguras e de alto desempenho.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill"><div class="badge">&lt;/&gt;</div><span>HTML</span></div>
+        <div class="skill"><div class="badge">&lt;/&gt;</div><span>CSS</span></div>
+        <div class="skill"><div class="badge">JS</div><span>JavaScript</span></div>
+        <div class="skill"><div class="badge">⚛</div><span>Python</span></div>
+        <div class="skill"><div class="badge">Node</div><span>Node.js</span></div>
+        <div class="skill"><div class="badge">SQL</div><span>SQL</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projetos -->
+<section id="projetos">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">Projetos</h2>
+      <p class="section-desc">
+        Uma seleção de aplicações web e mobile. Cada projeto traz um objetivo claro, stack e resultado.
+      </p>
+    </div>
+
+    <div class="projects-grid">
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="project-card" onclick="openModal('dashboard1')">
+          <h3>User Manager</h3>
+        </div>
+        <div id="dashboard1" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('dashboard1')">&times;</span>
+            <h2>User Manager</h2>
+            <p>Sistema de Cadastro de Usuários Desenvolvido Com:</p>
+            <ul>
+              <li>HTML + CSS + JavaScript</li>
+              <li>SQL (SQLite/MySQL/PostgreSQL)</li>
+              <li>Python (Flask)</li>
+              <a href="https://github.com/JeanLuccaToledo/cadastro-usuarios" target="_blank" class="btn-link"> 🔗 Ver no GitHub </a>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="project-card" onclick="openModal('dashboard2')">
+          <h3>Landing Page</h3>
+        </div>
+        <div id="dashboard2" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('dashboard2')">&times;</span>
+            <h2>Landing Page</h2>
+            <p>Este é o site que você está navegando agora.</p>
+            <ul>
+              <li>HTML + CSS + JS</li>
+              <li>Design responsivo</li>
+              <li>SEO otimizado</li>
+              <a href="https://github.com/seuusuario/portfolio" target="_blank" class="btn-link"> 🔗 Ver código no GitHub </a>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="project-card" onclick="openModal('dashboard3')">
+          <h3>API REST</h3>
+        </div>
+        <div id="dashboard3" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('dashboard3')">&times;</span>
+            <h2>API REST</h2>
+            <p>Serviço backend para integração de dados.</p>
+            <ul>
+              <li>Node.js + Express</li>
+              <li>Banco de dados MongoDB</li>
+              <li>Autenticação JWT</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+  <!-- É Sobre -->
+  <section id="sobre">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Sobre mim</h2>
+        <p class="section-desc">Desenvolvedor full stack com experiência em produtos de alto tráfego. Gosto de escrever código limpo, documentado e escalável.</p>
+      </div>
+
+      <div class="about">
+        <div class="about-box">
+          <h3 style="margin-top:0;">Quem sou</h3>
+          <p>Tenho <strong> 3 anos</strong> de experiência desenvolvendo e criando soluções digitais. Já atuei em projetos que envolvem desde a ideia inicial até a entrega final, desenvolvendo sistemas web, automatizando fluxos de dados e integrando plataformas para gerar eficiência e resultados reais.</p>
+          <p>Minha abordagem é orientada a resultados, com foco em testes automatizados, observabilidade e ciclos rápidos de feedback.</p>
+        </div>
+        <div class="about-box">
+          <h3 style="margin-top:0;">Stack principal</h3>
+          <ul style="margin:0; padding-left:18px;">
+            <li>Front-end: HTML, CSS, JavaScript</li>
+            <li>Back-end: Node.js, Java, Python</li>
+            <li>Banco de Dados: SQL (PostgreSQL, MySQL)</li>
+            <li>Outros: Git, consumo e criação de APIs REST</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Vamos conversar</h2>
+        <p class="section-desc">Precisa de ajuda em um projeto? Envie um email ou fale comigo nas redes.</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn teste" href="mailto:jean05lucca@gmail.com">Enviar email</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container foot">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <span>Jean Lucca Toledo de Souza</span>
+      </div>
+      <div class="social">
+        <a href="mailto:jean05lucca@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/jean-lucca-toledo-6838b7268/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/JeanLuccaToledo" target="_blank" rel="noopener">GitHub</a>
+        <a href="#top">Topo ↑</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
