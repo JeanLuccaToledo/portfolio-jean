@@ -1,3 +1,6 @@
+/* ===========================
+   Variáveis globais
+=========================== */
 :root {
   --bg: #0b1220;
   --bg-soft: #0f172a;
@@ -13,6 +16,9 @@
   --container: 1100px;
 }
 
+/* ===========================
+   Reset / Base
+=========================== */
 * { box-sizing: border-box; }
 html, body {
   background: radial-gradient(1200px 600px at 80% -100px, #0c1a2f 0%, var(--bg) 50%) fixed;
@@ -20,10 +26,20 @@ html, body {
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.6;
 }
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #00ffcc);
+  background-size: 200% 200%;
+  animation: gradientMove 15s ease infinite;
+}
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 .container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 24px; }
 
+/* ===========================
+   Header / Navegação
+=========================== */
 header {
   position: sticky; top: 0; z-index: 50;
   backdrop-filter: saturate(160%) blur(8px);
@@ -31,7 +47,7 @@ header {
   border-bottom: 1px solid var(--border);
 }
 .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
-.brand { display: flex; align-items: center; gap: 12px; font-weight: 700; height: 45px;}
+.brand { display: flex; align-items: center; gap: 12px; font-weight: 700; height: 45px; }
 .logo {
   width: 36px; height: 36px; border-radius: 10px;
   background: conic-gradient(from 180deg at 50% 50%, var(--accent), var(--accent-2), #60a5fa, var(--accent));
@@ -48,19 +64,28 @@ header {
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
 }
 
+/* ===========================
+   Hero
+=========================== */
 .hero { padding: 60px 0; }
 .hero-inner { display: grid; grid-template-columns: 1.35fr 1fr; gap: 40px; align-items: center; }
 .title { font-size: clamp(28px, 6vw, 48px); font-weight: 800; margin: 6px 0 14px; }
 .subtitle { color: var(--muted); max-width: 620px; }
 .hero-actions { display: flex; gap: 16px; margin-top: 24px; flex-wrap: wrap; }
+
+/* ===========================
+   Botões
+=========================== */
 .btn {
   padding: 12px 18px; border-radius: 12px; font-weight: 600;
   border: 1px solid var(--border); background: var(--card); color: var(--text);
 }
 .btn.primary { border: none; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #04131a; }
-
 .btn.teste { border: none; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #04131a; margin-bottom: 35px; }
 
+/* ===========================
+   Skills
+=========================== */
 .skills-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
 .skill {
   background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
@@ -68,9 +93,11 @@ header {
 }
 .badge { width: 45px; height: 45px; border-radius: 10px; background: #22d3ee; display: grid; place-items: center; color: #04131a; }
 
+/* ===========================
+   Projetos
+=========================== */
 .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
-
 .project-card {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: #fff;
@@ -95,14 +122,11 @@ header {
   box-shadow: 0 8px 20px rgba(0,0,0,0.5);
 }
 
+/* ===========================
+   Footer
+=========================== */
 footer { padding: 32px 0; border-top: 1px solid var(--border); background: rgba(11,18,32,.8); }
-.foot {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 24px;
-}
+.foot { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
 .social { display: flex; gap: 12px; }
 .social a {
   display: inline-block;
@@ -115,28 +139,17 @@ footer { padding: 32px 0; border-top: 1px solid var(--border); background: rgba(
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
-
 .social a:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.4);
   background: linear-gradient(135deg, var(--accent-2), var(--accent));
   color: #fff;
 }
+.social a { animation: pulse 2s infinite; }
 
-body {  
-  margin: 0;
-  height: 100vh;
-  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #00ffcc);
-  background-size: 200% 200%;
-  animation: gradientMove 15s ease infinite;
-}
-
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
+/* ===========================
+   Títulos
+=========================== */
 .section-title {
   font-size: 2rem;
   font-weight: 700;
@@ -146,7 +159,6 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-
 .section-title::before {
   content: "";
   position: absolute;
@@ -158,7 +170,6 @@ body {
   background: linear-gradient(180deg, #00ffcc, #2c5364);
   border-radius: 4px;
 }
-
 h3 {
   font-size: 1.4rem;
   font-weight: 500;
@@ -168,7 +179,6 @@ h3 {
   position: relative;
   text-transform: capitalize;
 }
-
 h3::before {
   content: "";
   position: absolute;
@@ -180,108 +190,9 @@ h3::before {
   border-radius: 2px;
 }
 
-.typing {
-  display: inline-block;
-  border-right: 2px solid var(--accent);
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 4s steps(22, end), blink 0.7s step-end infinite;
-}
-
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink {
-  from, to { border-color: transparent; }
-  50% { border-color: var(--accent); }
-}
-
-.title {
-  margin: 0;
-  text-align: center;
-}
-
-.title .name {
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: #ffffff;
-  text-shadow: 0 0 5px #00ffcc, 0 0 15px #2c5364;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(4px);
-}
-
-.modal-content {
-  background: #04131a;
-  color: #fff;
-  margin: 10% auto;
-  padding: 20px;
-  border-radius: 8px;
-  width: 80%;
-  max-width: 500px;
-  animation: fadeIn 0.5s ease;
-}
-
-.close {
-  float: right;
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: var(--accent);
-  transition: transform 0.2s ease;
-}
-
-.close:hover {
-  transform: rotate(90deg);
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.container {
-  width: 100%;
-  padding: 2rem;
-}
-
-@media (max-width: 1024px) {
-  .hero-inner {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .subtitle { margin: 0 auto; }
-  .nav { height: auto; padding: 12px 0; }
-  .nav-links { justify-content: center; flex-wrap: wrap; }
-  .skills-grid { grid-template-columns: repeat(3, 1fr); }
-  .projects-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 768px) {
-  .nav {
-    flex-direction: column;
-    gap: 12px;
-  }
-  .container { padding: 1rem; }
-  .title .name { font-size: 2.2rem; }
-  h3 { font-size: 1.2rem; }
-
-  .skills-grid { grid-template-columns: repeat(2, 1fr); }
-  .projects-grid { grid-template-columns: 1fr; }
-
-  .project-card { width: 100%; padding: 18px; }
-}
-
+/* ===========================
+   Subsection Titles
+=========================== */
 .subsection-title {
   font-size: 1.4rem;
   font-weight: 600;
@@ -292,7 +203,6 @@ h3::before {
   letter-spacing: 1px;
   position: relative;
 }
-
 .subsection-title::before {
   content: "";
   position: absolute;
@@ -304,20 +214,58 @@ h3::before {
   border-radius: 2px;
 }
 
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.7); }
-  70% { box-shadow: 0 0 0 10px rgba(34, 211, 238, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(34, 211, 238, 0); }
+/* ===========================
+   Title / Typing Effect
+=========================== */
+.title { margin: 0; text-align: center; }
+.title .name {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 0 0 5px #00ffcc, 0 0 15px #2c5364;
 }
-.social a {
-  animation: pulse 2s infinite;
+.typing {
+  display: inline-block;
+  border-right: 2px solid var(--accent);
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(22, end), blink 0.7s step-end infinite;
 }
 
-@keyframes float {
-  0% { transform: translateY(0); opacity: 0.8; }
-  50% { transform: translateY(-10px); opacity: 1; }
-  100% { transform: translateY(0); opacity: 0.8; }
+/* ===========================
+   Modals
+=========================== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
 }
+.modal-content {
+  background: #04131a;
+  color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  animation: fadeIn 0.5s ease;
+}
+.close {
+  float: right;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--accent);
+  transition: transform 0.2s ease;
+}
+.close:hover { transform: rotate(90deg); }
+
+/* ===========================
+   Particles
+=========================== */
 .particle {
   position: absolute;
   width: 4px; height: 4px;
@@ -326,10 +274,65 @@ h3::before {
   animation: float 4s ease-in-out infinite;
 }
 
+/* ===========================
+   Matrix Background
+=========================== */
 #matrix-bg {
   position: fixed;
   inset: 0;
   z-index: -1;
   background: transparent;
   pointer-events: none;
+}
+
+/* ===========================
+   Animations
+=========================== */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--accent); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(34, 211, 238, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 211, 238, 0); }
+}
+@keyframes float {
+  0% { transform: translateY(0); opacity: 0.8; }
+  50% { transform: translateY(-10px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 0.8; }
+}
+
+/* ===========================
+   Responsividade
+=========================== */
+@media (max-width: 1024px) {
+  .hero-inner { grid-template-columns: 1fr; text-align: center; }
+  .subtitle { margin: 0 auto; }
+  .nav { height: auto; padding: 12px 0; }
+  .nav-links { justify-content: center; flex-wrap: wrap; }
+  .skills-grid { grid-template-columns: repeat(3, 1fr); }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .nav { flex-direction: column; gap: 12px; }
+  .container { padding: 1rem; }
+  .title .name { font-size: 2.2rem; }
+  h3 { font-size: 1.2rem; }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  .projects-grid { grid-template-columns: 1fr; }
+  .project-card { width: 100%; padding: 18px; }
 }
