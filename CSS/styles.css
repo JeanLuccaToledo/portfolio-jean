@@ -49,9 +49,8 @@ header {
 .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
 .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; height: 45px; }
 .logo {
-  width: 36px; height: 36px; border-radius: 10px;
-  background: conic-gradient(from 180deg at 50% 50%, var(--accent), var(--accent-2), #60a5fa, var(--accent));
-  box-shadow: 0 8px 16px rgba(34, 211, 238, .25);
+  width: 50px; height: 50px; border-radius: 10px;
+  background: #0f2027;
 }
 .nav-links { display: flex; gap: 18px; }
 .nav-links a {
@@ -188,6 +187,24 @@ h3::before {
   height: 2px;
   background: linear-gradient(90deg, #00ffcc, #2c5364);
   border-radius: 2px;
+}
+.jeanstack {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  text-align: center;
+  background: conic-gradient(from 180deg at 50% 50%, var(--accent), #3890fc, var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #00d0ff, 0 0 10px #60a5fa;
+  }
+  to {
+    text-shadow: 0 0 10px #00e5ff, 0 0 20px #60a5fa;
+  }
 }
 
 /* ===========================
